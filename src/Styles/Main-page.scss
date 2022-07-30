@@ -1,0 +1,44 @@
+@import url('./Animations.scss');
+
+.main-page {
+    .main-wrapper {
+        background: linear-gradient(#ffffff, #d8f1ff);
+
+        div:nth-child(1) {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Mochiy Pop One', sans-serif;
+
+            h2 {
+                span {
+                    position: relative;
+                    color: #93d7ff;
+                    font-weight: 800;
+                    margin: 0 1rem;
+
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        width: 100%;
+                        height: 5px;
+                        background-color: #93d7ff;
+                        bottom: -.75rem;
+                        left: 0;
+                    }
+
+                    &:hover::after {
+                        animation: dont .4s ease-in;
+                    }
+                }
+            }
+        }
+
+        .image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
