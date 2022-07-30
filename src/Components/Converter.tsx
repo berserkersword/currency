@@ -18,7 +18,7 @@ const Converter = (props: { data: DataModel[] }) => {
     useEffect(() => {
 
         try {
-            setResult(String(count * Number(secondCode.cb_price)))
+            setResult(String(count * Number(secondCode.cb_price) / 1000))
         } catch (err) {
             setResult('Please write NUMBER')
         }
