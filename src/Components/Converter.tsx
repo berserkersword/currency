@@ -17,7 +17,7 @@ const Converter = (props: { data: DataModel[] }) => {
     const Change = () => {
 
         if (Number(count)) {
-            console.log(String(Number(count) * Number(secondCode.cb_price)))
+            console.log(typeof String(Number(count) * Number(secondCode.cb_price)))
         }
         else {
             setResult("Please You need write 'Number'")
