@@ -68,12 +68,11 @@ const Converter = (props: { data: DataModel[] }) => {
                         <textarea
                             id="editor"
                             rows={8}
-                            value={result}
                             className="block text-6xl  px-0 w-full text-white  bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
                             placeholder="Write an article..."
                             disabled
                         >
-
+                            {result}
                         </textarea>
                     </div>
                 </div>
