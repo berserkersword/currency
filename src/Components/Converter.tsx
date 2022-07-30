@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { TbArrowsRightLeft } from 'react-icons/tb';
 import { DataModel } from '../Model/Model';
 
@@ -15,11 +15,15 @@ const Converter = (props: { data: DataModel[] }) => {
         date: `${Date.now}`
     })
 
-    try {
-        setResult(String(count * Number(secondCode.cb_price)))
-    } catch (err) {
-        setResult('Please write NUMBER')
-    }
+    useEffect(() => {
+
+        try {
+            setResult(String(count * Number(secondCode.cb_price)))
+        } catch (err) {
+            setResult('Please write NUMBER')
+        }
+    }, [count, secondCode])
+
 
     return (
         <div className="pt-20" style={{ height: '100vh' }}>
