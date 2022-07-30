@@ -44,7 +44,7 @@ const Converter = (props: { data: DataModel[] }) => {
                                             props.data.map(item => {
                                                 return (
                                                     <li onClick={() => { setSecondCode(item); setSecondtDrop(false) }}>
-                                                        <p className="block text-white py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">{item.code}</p>
+                                                        <p className="block text-gray-900 py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">{item.code}</p>
                                                     </li>
                                                 )
                                             })
@@ -55,13 +55,13 @@ const Converter = (props: { data: DataModel[] }) => {
                         </div>
 
                     </div>
-                    <div className="py-2 px-4 bg-white rounded-b-lg dark:bg-gray-800" style={{ border: '1px solid #222' }}>
+                    <div className="py-2 px-4 flex bg-white rounded-b-lg dark:bg-gray-800" style={{ border: '1px solid #222' }}>
                         <label htmlFor="editor" className="sr-only">Publish post</label>
                         <textarea
                             id="editor"
                             rows={8}
                             onChange={e => setCount(Number(e.target.value))}
-                            className="block  px-0 w-full text-6xl text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
+                            className="block  px-0 w-full text-3xl text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
                             placeholder="1"
                         >
 
@@ -73,7 +73,7 @@ const Converter = (props: { data: DataModel[] }) => {
                             id="editor"
                             rows={8}
                             value={result}
-                            className="block text-6xl  px-0 w-full text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
+                            className="block text-3xl  px-0 w-full text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
                             placeholder="Write an article..."
                             disabled
                         >
