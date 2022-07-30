@@ -4,7 +4,7 @@ import { DataModel } from '../Model/Model';
 
 const Converter = (props: { data: DataModel[] }) => {
     const [secondtDrop, setSecondtDrop] = useState(false)
-    const [count, setCount] = useState('1')
+    const [count, setCount] = useState(1)
     const [result, setResult] = useState('')
     const [secondCode, setSecondCode] = useState<DataModel>({
         title: "UZ",
@@ -16,7 +16,7 @@ const Converter = (props: { data: DataModel[] }) => {
     })
 
     try {
-        setResult(String(Number(count) * Number(secondCode.cb_price)))
+        setResult(String(count * Number(secondCode.cb_price)))
     } catch (err) {
         setResult('Please write NUMBER')
     }
@@ -56,7 +56,7 @@ const Converter = (props: { data: DataModel[] }) => {
                         <textarea
                             id="editor"
                             rows={8}
-                            onChange={e => setCount(e.target.value)}
+                            onChange={e => setCount(Number(e.target.value))}
                             className="block  px-0 w-full text-6xl text-white bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
                             placeholder="1"
                         >
