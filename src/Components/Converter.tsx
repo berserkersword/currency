@@ -26,7 +26,7 @@ const Converter = (props: { data: DataModel[] }) => {
 
 
     return (
-        <div className="pt-20" style={{ height: '100vh' }}>
+        <div className="pt-20" style={{ minHeight: '100vh' }}>
             <form>
                 <div className="mb-4 w-9/12 mx-auto bg-gray-50 rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600">
                     <div className="flex justify-between items-center py-2 px-3 border-b dark:border-gray-600">
