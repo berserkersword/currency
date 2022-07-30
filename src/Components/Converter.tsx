@@ -14,16 +14,12 @@ const Converter = (props: { data: DataModel[] }) => {
         nbu_cell_price: "",
         date: `${Date.now}`
     })
-    const Change = () => {
 
-        try {
-            setResult(String(Number(count) * Number(secondCode.cb_price)))
-        } catch (err) {
-            setResult('Please write NUMBER')
-        }
-
+    try {
+        setResult(String(Number(count) * Number(secondCode.cb_price)))
+    } catch (err) {
+        setResult('Please write NUMBER')
     }
-    Change()
 
     return (
         <div className="pt-20" style={{ height: '100vh' }}>
